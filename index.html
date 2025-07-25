@@ -61,12 +61,15 @@
                     <hr>
                     <button id="add-task" class="button">Add task</button>
                 </form>
-                <div class="download-restore-data">
-                    <button>Download all data</button>
-                    <button>Restore all data</button>
+                <div class="export-import-data">
+                    <h1>Manage Data</h1>
+                    <div>
+                        <button id="export-button">Export tasks</button>
+                        <button id="import-button">Import tasks</button>
+                        <input type="file" id="import-tasks" accept="application/json" style="display: none;">
+                    </div>
                 </div>
             </div>
-
         </div>
         <div class="section">
             <a href="#top" id="to-top">&uarr;</a>
@@ -108,6 +111,8 @@
     <script src="/js/display-days-with-tasks.js"></script>
     <script src="/js/display-days-number.js"></script>
     <script src="/js/sidebar.js"></script>
+    <script src="/js/export-local-storage.js"></script>
+    <script src="/js/import-local-storage.js"></script>
 </body>
 
 </html>

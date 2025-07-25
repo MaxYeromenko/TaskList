@@ -1,5 +1,5 @@
 footer, main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button, main .section:nth-of-type(2) .day-list .day .day-tasks, main .section .section-header,
-main .section .section-content, main .section, header, body, main .section:nth-of-type(2) .section-header button, main .section:nth-of-type(2) #to-top, main .section:nth-of-type(1) .download-restore-data button, main .section:nth-of-type(1) form .button {
+main .section .section-content, main .section, header, body, main .section:nth-of-type(2) .section-header button, main .section:nth-of-type(2) #to-top, main .section:nth-of-type(1) .export-import-data div button, main .section:nth-of-type(1) form .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11,7 +11,7 @@ main .section .section-content, main .section, header, body, main .section:nth-o
           align-items: center;
 }
 
-main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button, main .section:nth-of-type(2) .section-header button, main .section:nth-of-type(2) #to-top, main .section:nth-of-type(1) .download-restore-data button, main .section:nth-of-type(1) form .button {
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button, main .section:nth-of-type(2) .section-header button, main .section:nth-of-type(2) #to-top, main .section:nth-of-type(1) .export-import-data div button, main .section:nth-of-type(1) form .button {
   padding: 1%;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -23,19 +23,19 @@ main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button,
   transition: all 0.3s ease;
   cursor: pointer;
 }
-main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button i, main .section:nth-of-type(2) .section-header button i, main .section:nth-of-type(2) #to-top i, main .section:nth-of-type(1) .download-restore-data button i, main .section:nth-of-type(1) form .button i {
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button i, main .section:nth-of-type(2) .section-header button i, main .section:nth-of-type(2) #to-top i, main .section:nth-of-type(1) .export-import-data div button i, main .section:nth-of-type(1) form .button i {
   color: var(--text-color);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:hover, main .section:nth-of-type(2) .section-header button:hover, main .section:nth-of-type(2) #to-top:hover, main .section:nth-of-type(1) .download-restore-data button:hover, main .section:nth-of-type(1) form .button:hover {
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:hover, main .section:nth-of-type(2) .section-header button:hover, main .section:nth-of-type(2) #to-top:hover, main .section:nth-of-type(1) .export-import-data div button:hover, main .section:nth-of-type(1) form .button:hover {
   background-color: var(--text-color);
   color: var(--primary-color);
 }
-main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:hover i, main .section:nth-of-type(2) .section-header button:hover i, main .section:nth-of-type(2) #to-top:hover i, main .section:nth-of-type(1) .download-restore-data button:hover i, main .section:nth-of-type(1) form .button:hover i {
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:hover i, main .section:nth-of-type(2) .section-header button:hover i, main .section:nth-of-type(2) #to-top:hover i, main .section:nth-of-type(1) .export-import-data div button:hover i, main .section:nth-of-type(1) form .button:hover i {
   color: var(--primary-color);
 }
-main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:active, main .section:nth-of-type(2) .section-header button:active, main .section:nth-of-type(2) #to-top:active, main .section:nth-of-type(1) .download-restore-data button:active, main .section:nth-of-type(1) form .button:active {
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:active, main .section:nth-of-type(2) .section-header button:active, main .section:nth-of-type(2) #to-top:active, main .section:nth-of-type(1) .export-import-data div button:active, main .section:nth-of-type(1) form .button:active {
   background-color: var(--quaternary-color);
 }
 
@@ -182,7 +182,7 @@ main .section .section-content {
 }
 main .section .section-content form,
 main .section .section-content .day-list,
-main .section .section-content .download-restore-data {
+main .section .section-content .export-import-data {
   padding: 3%;
   width: 100%;
   display: -webkit-box;
@@ -243,14 +243,24 @@ main .section:nth-of-type(1) form .date-time div {
 main .section:nth-of-type(1) form .button {
   width: 100%;
 }
-main .section:nth-of-type(1) .download-restore-data {
+main .section:nth-of-type(1) .export-import-data {
+  background-color: var(--thirdly-color);
+}
+main .section:nth-of-type(1) .export-import-data h1 {
+  text-align: center;
+  font-size: larger;
+}
+main .section:nth-of-type(1) .export-import-data div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  background-color: var(--thirdly-color);
+  gap: 10px;
 }
-main .section:nth-of-type(1) .download-restore-data button {
+main .section:nth-of-type(1) .export-import-data div button {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
