@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @extend %centered;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: var(--primary-color);
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    a {
+        transition: all .3s ease;
+        text-decoration: none;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    input[type="checkbox"],
+    .checkmark,
+    input[type="number"],
+    textarea,
+    select,
+    button {
+        @extend .winky-rough-regular;
+        padding: 2px 5px;
+        width: 100%;
+        background-color: var(--primary-color);
+        border: 0px;
+        border-radius: 2px;
+        font-size: 1rem;
+        overflow: hidden;
+    }
+
+    hr {
+        width: 100%;
+        border: none;
+        border-top: 0.4vh solid var(--primary-color);
+        margin: 5px 0;
+    }
+}

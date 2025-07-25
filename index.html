@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do list</title>
+    <link rel="stylesheet" href="/css/importer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8fbd545149.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="winky-rough-regular">
+    <main>
+        <div class="section">
+            <header>
+                <span id="current-date"></span>
+                <span>
+                    &copy;&puncsp;
+                    <span id="current-year"></span>
+                    &puncsp;Maksym Yeromenko
+                </span>
+            </header>
+            <div class="section-content">
+                <form id="add-task-form" action="submit">
+                    <h1>Add Your Task</h1>
+                    <div class="title-priority">
+                        <div>
+                            <label for="task-title">Task title</label>
+                            <input type="text" name="task-title" id="task-title" placeholder="Task title">
+                        </div>
+                        <div>
+                            <label for="task-priority">Task priority</label>
+                            <select name="task-priority" id="task-priority">
+                                <option class="high-priority" value="high">High</option>
+                                <option class="medium-priority" value="medium">Medium</option>
+                                <option class="low-priority" value="low">Low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <div>
+                        <label for="task-description">Task description</label>
+                        <textarea name="task-description" id="task-description" cols="12" rows="5"
+                            placeholder="Task description"></textarea>
+                    </div>
+                    <hr>
+                    <div class="date-time">
+                        <div>
+                            <label for="task-date">Task assignment day</label>
+                            <input type="date" name="task-date" id="task-date">
+                        </div>
+                        <div>
+                            <label for="task-time">Task time</label>
+                            <input type="time" name="task-time" id="task-time">
+                        </div>
+                    </div>
+                    <hr>
+                    <button id="add-task" class="button">Add task</button>
+                </form>
+                <div class="download-restore-data">
+                    <button>Download all data</button>
+                    <button>Restore all data</button>
+                </div>
+            </div>
+
+        </div>
+        <div class="section">
+            <a href="#top" id="to-top">&uarr;</a>
+            <div class="section-header">
+                <button id="sidebarButton">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div>
+                    <label for="display-days-with-tasks">Display days with tasks</label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" name="display-days-with-tasks" id="display-days-with-tasks">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div>
+                    <label for="go-to-day">Go to day</label>
+                    <input type="date" name="go-to-day" id="go-to-day">
+                </div>
+                <div>
+                    <label for="days-display-number">Days display number</label>
+                    <input type="number" name="days-display-number" id="days-display-number" min="0" max="90" step="1">
+                </div>
+            </div>
+            <div class="section-content">
+                <div class="day-list"></div>
+            </div>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/8fbd545149.js" crossorigin="anonymous"></script>
+    <script src="js/limit-date-time.js"></script>
+    <script src="/js/day-task-patterns.js"></script>
+    <script src="/js/set-current-date.js"></script>
+    <script src="/js/add-task.js"></script>
+    <script src="/js/delete-task.js"></script>
+    <script src="/js/go-to-day.js"></script>
+    <script src="/js/to-top-visibility.js"></script>
+    <script src="/js/toggle-task-activeness.js"></script>
+    <script src="/js/init-day-list.js"></script>
+    <script src="/js/display-days-with-tasks.js"></script>
+    <script src="/js/display-days-number.js"></script>
+    <script src="/js/sidebar.js"></script>
+</body>
+
+</html>

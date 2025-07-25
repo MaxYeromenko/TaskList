@@ -1,0 +1,527 @@
+footer, main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button, main .section:nth-of-type(2) .day-list .day .day-tasks, main .section .section-header,
+main .section .section-content, main .section, header, body, main .section:nth-of-type(2) .section-header button, main .section:nth-of-type(2) #to-top, main .section:nth-of-type(1) .download-restore-data button, main .section:nth-of-type(1) form .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button, main .section:nth-of-type(2) .section-header button, main .section:nth-of-type(2) #to-top, main .section:nth-of-type(1) .download-restore-data button, main .section:nth-of-type(1) form .button {
+  padding: 1%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button i, main .section:nth-of-type(2) .section-header button i, main .section:nth-of-type(2) #to-top i, main .section:nth-of-type(1) .download-restore-data button i, main .section:nth-of-type(1) form .button i {
+  color: var(--text-color);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:hover, main .section:nth-of-type(2) .section-header button:hover, main .section:nth-of-type(2) #to-top:hover, main .section:nth-of-type(1) .download-restore-data button:hover, main .section:nth-of-type(1) form .button:hover {
+  background-color: var(--text-color);
+  color: var(--primary-color);
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:hover i, main .section:nth-of-type(2) .section-header button:hover i, main .section:nth-of-type(2) #to-top:hover i, main .section:nth-of-type(1) .download-restore-data button:hover i, main .section:nth-of-type(1) form .button:hover i {
+  color: var(--primary-color);
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:active, main .section:nth-of-type(2) .section-header button:active, main .section:nth-of-type(2) #to-top:active, main .section:nth-of-type(1) .download-restore-data button:active, main .section:nth-of-type(1) form .button:active {
+  background-color: var(--quaternary-color);
+}
+
+.winky-rough-regular, body input[type=text],
+body input[type=date],
+body input[type=time],
+body input[type=checkbox],
+body .checkmark,
+body input[type=number],
+body textarea,
+body select,
+body button {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.winky-rough-semi-bold {
+  font-family: "Winky Rough", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+:root {
+  --primary-color: #f5ede0;
+  --secondary-color: #a0846c;
+  --thirdly-color: #c1a58a;
+  --quaternary-color: #8b5e3c;
+  --text-color: #3e2c20;
+}
+
+[data-theme=default] {
+  --primary-color: #f5ede0;
+  --secondary-color: #a0846c;
+  --thirdly-color: #c1a58a;
+  --quaternary-color: #8b5e3c;
+  --text-color: #3e2c20;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: var(--text-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--primary-color);
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+body a {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+body input[type=text],
+body input[type=date],
+body input[type=time],
+body input[type=checkbox],
+body .checkmark,
+body input[type=number],
+body textarea,
+body select,
+body button {
+  padding: 2px 5px;
+  width: 100%;
+  background-color: var(--primary-color);
+  border: 0px;
+  border-radius: 2px;
+  font-size: 1rem;
+  overflow: hidden;
+}
+body hr {
+  width: 100%;
+  border: none;
+  border-top: 0.4vh solid var(--primary-color);
+  margin: 5px 0;
+}
+
+header {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1%;
+  width: 100%;
+  min-height: 5vh;
+  background-color: var(--thirdly-color);
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+}
+main .high-priority {
+  background-color: rosybrown;
+}
+main .medium-priority {
+  background-color: goldenrod;
+}
+main .low-priority {
+  background-color: yellowgreen;
+}
+main .section {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: auto;
+  background-color: var(--secondary-color);
+}
+main .section .section-header,
+main .section .section-content {
+  width: 100%;
+}
+main .section .section-content {
+  padding: 3%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  gap: 10px;
+}
+main .section .section-content form,
+main .section .section-content .day-list,
+main .section .section-content .download-restore-data {
+  padding: 3%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+}
+main .section:nth-of-type(1) {
+  height: 100vh;
+  width: 40%;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+main .section:nth-of-type(1) form {
+  background-color: var(--thirdly-color);
+}
+main .section:nth-of-type(1) form h1 {
+  text-align: center;
+  font-size: larger;
+}
+main .section:nth-of-type(1) form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .section:nth-of-type(1) form div textarea {
+  resize: none;
+}
+main .section:nth-of-type(1) form .title-priority,
+main .section:nth-of-type(1) form .date-time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+}
+main .section:nth-of-type(1) form .title-priority div,
+main .section:nth-of-type(1) form .date-time div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+main .section:nth-of-type(1) form .button {
+  width: 100%;
+}
+main .section:nth-of-type(1) .download-restore-data {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  background-color: var(--thirdly-color);
+}
+main .section:nth-of-type(1) .download-restore-data button {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+main .sidebar {
+  width: 70% !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  position: fixed !important;
+  -webkit-box-shadow: 10px 0 15px var(--text-color);
+          box-shadow: 10px 0 15px var(--text-color);
+  z-index: 1;
+}
+main .section:nth-of-type(2) {
+  padding: 0.5%;
+  width: 60%;
+  position: relative;
+}
+main .section:nth-of-type(2) #to-top {
+  display: none;
+  padding: 0;
+  width: 3.25%;
+  aspect-ratio: 1/1;
+  position: fixed;
+  left: 40.75%;
+  bottom: 1.2%;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border-radius: 100%;
+}
+main .section:nth-of-type(2) .section-header {
+  padding: 0 6%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 10px;
+}
+main .section:nth-of-type(2) .section-header button {
+  height: 70%;
+  aspect-ratio: 1/1;
+  display: none;
+}
+main .section:nth-of-type(2) .section-header > div {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+main .section:nth-of-type(2) .section-header .custom-checkbox {
+  width: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  height: 1.675rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+main .section:nth-of-type(2) .section-header .custom-checkbox .checkmark {
+  width: 100%;
+  border-radius: 2px;
+  position: relative;
+}
+main .section:nth-of-type(2) .section-header .custom-checkbox input[type=checkbox] {
+  display: none;
+}
+main .section:nth-of-type(2) .section-header .custom-checkbox input[type=checkbox]:checked + .checkmark::after {
+  content: "";
+  background-color: yellowgreen;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+main .section:nth-of-type(2) .section-header #days-display-number {
+  height: 1.675rem;
+}
+main .section:nth-of-type(2) .day-list {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+main .section:nth-of-type(2) .day-list .day {
+  padding: 1%;
+  width: 100%;
+  background-color: var(--thirdly-color);
+  border-radius: 3px;
+  -webkit-transition: outline 0.3s ease;
+  transition: outline 0.3s ease;
+}
+main .section:nth-of-type(2) .day-list .day .day-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .section:nth-of-type(2) .day-list .day hr {
+  margin: 15px 0;
+  border-color: var(--secondary-color);
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  word-wrap: break-word;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task {
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  grid-template-columns: 95% 5%;
+  grid-template-rows: auto auto auto auto auto;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task hr {
+  margin: 0;
+  padding: 0;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task > div {
+  padding: 2%;
+  text-align: justify;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task hr:nth-of-type(1) {
+  grid-column: 1;
+  grid-row: 2;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task hr:nth-of-type(2) {
+  grid-column: 1;
+  grid-row: 4;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .title-time {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .title-time div {
+  max-width: 100%;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .task-desc {
+  grid-column: 1;
+  grid-row: 3;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .task-priority {
+  grid-column: 1;
+  grid-row: 5;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button {
+  grid-column: 2;
+  grid-row: 1/6;
+  background-color: transparent;
+  width: 100%;
+  border-radius: 0 5px 5px 0;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:hover {
+  background-color: var(--primary-color);
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:hover i {
+  color: #b41f17;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button:active {
+  background-color: #d4d4d4;
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .day-task .delete-button i {
+  color: var(--primary-color);
+}
+main .section:nth-of-type(2) .day-list .day .day-tasks .completed-task b,
+main .section:nth-of-type(2) .day-list .day .day-tasks .completed-task span {
+  text-decoration: line-through;
+}
+main .section:nth-of-type(2) .day-list .highlight {
+  -webkit-box-shadow: 0 0 15px orange;
+          box-shadow: 0 0 15px orange;
+}
+
+@media (max-width: 960px) {
+  main {
+    gap: 0;
+  }
+  main .section:nth-of-type(1) {
+    display: none;
+  }
+  main .section:nth-of-type(2) {
+    width: 100%;
+  }
+  main .section:nth-of-type(2) #to-top {
+    width: 5%;
+    left: 47.5%;
+  }
+  main .section:nth-of-type(2) .section-header button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 548px) {
+  main .section:nth-of-type(2) {
+    padding: 5% 0;
+  }
+  main .section:nth-of-type(2) #to-top {
+    width: 8%;
+    left: 47.5%;
+  }
+  main .section:nth-of-type(2) .section-header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  main .section:nth-of-type(2) .section-header button {
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    aspect-ratio: 0;
+    max-height: 40%;
+  }
+}
+@media (max-width: 492px) {
+  main .section:nth-of-type(2) .section-header div {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  main .sidebar {
+    width: 85% !important;
+  }
+}
+footer {
+  padding: 1%;
+  width: 100%;
+  min-height: 5vh;
+  background-color: var(--thirdly-color);
+}
