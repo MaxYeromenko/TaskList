@@ -13,17 +13,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 checkBox.addEventListener("change", () => {
-    if (daysNumberElement.value != 0) {
-        daysNumberElement.value = 0;
-        localStorage.setItem("daysNumber", 0);
-    }
+    // if (daysNumberElement.value != 0) {
+    //     daysNumberElement.value = 0;
+    //     localStorage.setItem("daysNumber", 0);
+    // }
     const isChecked = checkBox.checked;
     localStorage.setItem("hideEmptyDays", isChecked);
 
     if (isChecked) {
         HideEmptyDays();
     } else {
-        RestoreAllDays();
+        DisplayNumberOfDays(daysNumberElement.value);
     }
 });
 
